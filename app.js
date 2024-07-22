@@ -65,10 +65,9 @@ born in the 1500's.
   the years 1500 and 1599.
 */
 
-let veryOldInventors = inventors.filter(inventor => inventor.year >= 1500 && inventor.year <= 1599);
-
-
 // Complete the exercise in the space below:
+
+let veryOldInventors = inventors.filter(inventor => inventor.year >= 1500 && inventor.year <= 1599);
 
 // Check your work:
 console.log('Exercise 1 my result: ', veryOldInventors)
