@@ -42,7 +42,6 @@ const inventors = [
     { name: 'Wes', year: 2015 }
   ];
   
-
   const comments = [
     { text: 'Love this!', id: 523423 },
     { text: 'Super good', id: 823423 },
@@ -51,7 +50,6 @@ const inventors = [
     { text: 'Nice Nice Nice!', id: 542328 }
   ];
   
-
   /*
 Exercise 1: Array.prototype.filter()
 
@@ -105,6 +103,7 @@ let inventorNames = inventors.map(inventor => ({
   first: inventor.first, 
   last: inventor.last
 }));
+
 
 // Complete the exercise in the space below:
 
@@ -200,10 +199,10 @@ Hint: Use the String.prototype.split() method to separate the first and last
 // Complete the exercise in the space below:
 
 let firstLast = people.map(fullName => {
-  const [lastName, firstName] = fullName.split(',')
-    return '$(firstName) $(lastName)'
-    
-  })
+  const [lastName, firstName] = fullName.split(', ')
+  return `${firstName} ${lastName}`
+
+})
   
   // Check your work:
   console.log('Exercise 5 my result: ', firstLast)
@@ -252,3 +251,27 @@ let firstLast = people.map(fullName => {
       'William Blake'
     ]
   )
+
+  /*
+Exercise 6: Array.prototype.some()
+
+Determine if there is at least one person in the devs array who is 18 years 
+old or older.
+
+- You have an array of people with their respective ages.
+- Use the Array.prototype.some() method to check if any person in the array is 
+  18 years old or older.
+- Store the result (true or false) in the variable 'isAdultPresent'. 
+*/
+
+let currentYear = 2024
+
+const isAdultPresent = devs.some(dev => currentYear - devYear >= 18);
+
+// Complete the exercise in the space below:
+
+
+
+// Check your work:
+console.log('Exercise 6 my result: ', isAdultPresent)
+console.log('Exercise 6 correct result: ', true)
